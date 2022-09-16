@@ -51,11 +51,3 @@ for key, value in new_dict.items():
 
 with open("desktop_status.txt", "a") as ds:
     ds.write(str(new_dict) + "\n")
-
-
-
-
-
- 
-
-
