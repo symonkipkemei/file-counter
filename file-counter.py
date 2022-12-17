@@ -31,7 +31,7 @@ pprint(new_dict)
 
 #loop through the files and see which one exceeds 5
 for key, value in new_dict.items():
-    if value >= 5:
+    if value >= 3:
         # loop through all files in dekstop, filter filepaths to only those that resemble the key and are files and not directories
         for filepath in desktop_path.iterdir():
             if filepath.suffix == key and filepath.is_file():
