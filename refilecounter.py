@@ -29,10 +29,10 @@ def get_file_data(directory_path:pathlib.Path):
     file_data = []
 
     # loop throught the primary directory_path, filter files only.
-    for index,filepath in enumerate(directory_path.iterdir(),1):
+    for filepath in directory_path.iterdir():
         if filepath.is_file():
             #naming is consistent with the data base
-            data = {"file_name":filepath.stem ,"file_path":filepath.name ,"file_type_id":filepath.suffix}
+            data = {"file_name":filepath.stem ,"file_path":filepath.name ,"file_type":filepath.suffix}
             file_data.append(data)
 
     return file_data
@@ -92,19 +92,6 @@ def clean_directory(directory_path:pathlib.Path,file_type:dict,limit:int):
                     filepath.replace(new_filepath)
 
 
-def main():
-    desktop_path = "/mnt/d/New folder"
-    path = get_path(desktop_path)
-    pprint(get_file_data(path))
-
-    print("break")
-
-    pprint(file_type_count(path))
-
-
-
-#database design
-        
-          
+    
 if __name__ == "__main__":
     pass

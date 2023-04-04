@@ -43,12 +43,42 @@
     by codingnomads
     ```
 
+
+    ```
+
+    Revisit your file counter script. Instead of writing the logs of each run to a file, you'll set it up to write to a SQL database instead.
+
+    Info: If you need a refresher on interacting with a database using Python, check out the Working with Databases in Python section of the linked course.
+    Collect the same information you saved to a CSV file before into a database instead. You can use a file-based SQLite database or a server-based database such as PostgreSQL or MySQL.
+
+    Additionally, look into Python's datetime module and attempt to track the times when you ran your script.
+
+    Data Analysis
+    Once your script is set up to save its run data into your database, you'll next write a script to analyze your collected desktop statistics.
+
+     Use your Python skills to calculate:
+
+    The total number of files that was on your desktop since you started tracking it
+    The total number for each file type
+    On what day you had the most items on your desktop
+    The most common file type ever to clutter your desktop
+    Write your results to a new table in your database and set your analysis script up so that it keeps updating this table on each execution.
+
+
+    ```
+
+
+
+
+
 <TECHNOLOGIES>
 
 <h1 id="tech">Technologies</h1>
 
 ## Builth With
 - Python
+- SQLAlchemy module
+- Pathlib module
 
 
 <PROJECT-SETUP>
@@ -72,7 +102,7 @@ To get this project up and running locally, you must already have python plus th
 ```
 - $ git clone `$ git clone https://github.com/symonkipkemei/file-counter.git`
 - $ git checkout develop
-- Run `python file-counter.py`
+- Run `python3 main.py`
 ```
 
 - [Live Version](https://replit.com/@symonkipkemei/file-counter#file-counter.py)
@@ -91,15 +121,14 @@ To get this project up and running locally, you must already have python plus th
 <h1 id="info">Project Information</h1>
 
 ## Project Status
-- In development
+- Complete
 
 ## Features
-- A decoding option
-- Allow user to paste long paragraphs
-- An interface to allow the user to choose between encrypting and decrypting
+- Your suggestions
 
 ## TODO
-
+- Set up a cronjob to run the script every day
+- Set up views of the clutter analysis
 
 
 <CONTRIBUTING>
